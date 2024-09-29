@@ -1,4 +1,51 @@
 # Client Task B #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+// Warehouse Navigation to Find Specific Location
 
+START
+
+// Initialize customer's starting position
+customerPosition = (startX, startY)
+
+// Set target location (destination)
+targetPosition = (targetX, targetY)
+
+// Define directions
+NORTH = (0, 1)
+SOUTH = (0, -1)
+EAST = (1, 0)
+WEST = (-1, 0)
+
+WHILE customerPosition != targetPosition DO
+    // Calculate the difference in X and Y coordinates
+    deltaX = targetPosition.X - customerPosition.X
+    deltaY = targetPosition.Y - customerPosition.Y
+
+    // Check if the customer needs to move in the X direction
+    IF deltaX > 0 THEN
+        PRINT "Move EAST"
+        customerPosition.X = customerPosition.X + 1
+    ELSE IF deltaX < 0 THEN
+        PRINT "Move WEST"
+        customerPosition.X = customerPosition.X - 1
+    END IF
+
+    // Check if the customer needs to move in the Y direction
+    IF deltaY > 0 THEN
+        PRINT "Move NORTH"
+        customerPosition.Y = customerPosition.Y + 1
+    ELSE IF deltaY < 0 THEN
+        PRINT "Move SOUTH"
+        customerPosition.Y = customerPosition.Y - 1
+    END IF
+
+    // Display current position
+    PRINT "Current Position: ", customerPosition
+
+END WHILE
+
+// Once the customer reaches the destination
+PRINT "You have arrived at the location!"
+
+END

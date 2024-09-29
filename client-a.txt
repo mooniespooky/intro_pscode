@@ -1,4 +1,41 @@
 # Client Task A #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+// Number Guessing Game
 
+START
+
+// Generate a random number between 1 and 10
+randomNumber = RANDOM(1, 10)
+
+// Initialize number of attempts
+attempts = 0
+
+// Set the maximum number of attempts
+maxAttempts = 3
+
+WHILE attempts < maxAttempts DO
+    // Prompt player for a guess
+    PRINT "Enter your guess (1-10):"
+    playerGuess = INPUT()
+
+    // Increment the number of attempts
+    attempts = attempts + 1
+
+    // Check if player's guess is correct
+    IF playerGuess == randomNumber THEN
+        PRINT "Congratulations! You guessed the correct number."
+        BREAK
+    ELSE IF playerGuess < randomNumber THEN
+        PRINT "Too low! Try again."
+    ELSE
+        PRINT "Too high! Try again."
+    END IF
+
+    // Check if player has reached the maximum attempts
+    IF attempts == maxAttempts THEN
+        PRINT "Sorry! You've used all your attempts. The correct number was ", randomNumber
+    END IF
+END WHILE
+
+END

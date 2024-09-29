@@ -1,4 +1,21 @@
 # Client Task C #
 # Add your pseudocode to this file below this line: #
 # ------------------------------------------------- #
+// Hardware Device Scanning and Sorting Program
 
+START
+
+// Initialize variables
+productCount = 0
+maxProductsInCase = 50
+
+// Loop to count from 2 to 50, counting by twos
+FOR productCount = 2 TO maxProductsInCase STEP 2 DO
+    // Print the current product count
+    PRINT productCount
+END FOR
+
+// Once done, print a message indicating the process is complete
+PRINT "All packages for this case have been scanned."
+
+END
